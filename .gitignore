@@ -77,3 +77,23 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+*.opensdf
+C_netz2.sdf
+*.vcxproj
+C_netz2/Debug/CL.read.1.tlog
+*.tlog
+C_netz2/Debug/vc100.idb
+*.manifest
+C_netz2/C_netz2.vcxproj.filters
+*.suo
+*.lastbuildstate
+C_netz2/Debug/C_netz2.unsuccessfulbuild
+*.pdb
+C_netz2/Debug/C_netz2_manifest.rc
+*.cache
+Debug/C_netz2.ilk
+*.ipch
+C_netz2/Debug/C_netz2.log
+*.user
+C_netz2/Debug/C_netz2.exe.embed.manifest.res
+C_netz2.sln
