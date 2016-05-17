@@ -40,29 +40,28 @@ int get_digit(int dig, int pos){
 	}
 
 }*/
-void binary(string x){
+string binary(int x){
 	
+string bina="";
+int c=1,i=512;
 
-
-
-
-
-	}
+do{
+	if(x>=i){bina=bina + "1";x=x-i;
+	}else{bina=bina + "0";}
+	c++; i=i/2;
+	}while(c<=10);
+	return bina;	
 }
-/*int rumble(int *arr, int rand){
-
-}
-*/
-
 int main(){
 
 // -------define Variables
 string input,x_c;
-string *bin;
 
 int x,c_last,c_cryp_001,endll=0;
 int *dArray;
 // ---------
+
+
 
 //------ OPEN FILE
 ofstream file_a;
@@ -74,7 +73,7 @@ cout<<"ha3534634636"<<endl;
 getline(cin,input); // << INPUT
 
 int lenght_str=input.length()-1;
-dArray = new int[lenght_str];			//<-- array list
+dArray = new int[lenght_str];
 
 for(int i=0;i<=lenght_str;i++){
 	x=input.at(i);
@@ -119,11 +118,18 @@ if(c_last>=4 && c_last<=6){
 }
 //----------------------
 
+string *bin = new string [lenght_str+1];
 
-	for(int i=0;i<=lenght_str;i++){
-		dArray[i] = dArray[i]+dArray[lenght_str+1];
-		//cout<<dArray[i]<<dArray[lenght_str+1];
+
+for(int i=0;i<=lenght_str;i++){
+		dArray[i] = dArray[i]+dArray[lenght_str+1];		 // PLUS THE num_to_rand
+		bin[i]=binary(dArray[i]);						 // GET BINARY to STRING
+		cout<<bin[i]<<endl;								
 	}
+
+
+
+	
 
 
 	file_a.close();
