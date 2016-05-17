@@ -1,5 +1,7 @@
 #include "header007.h"
 
+
+
 using namespace std;
 
 int int_char(char y){
@@ -28,19 +30,49 @@ int get_digit(int dig, int pos){
 		break;
 	}
 }
+/*string *int_b_str(int *x,int length){
+	string *str_i;
+	for(int i=0;i<=length;i++){
+		for(int j=0;j<=2;j++){
+			
+
+		}
+	}
+
+}*/
+void binary(string x){
+	
+
+
+
+
+
+	}
+}
+/*int rumble(int *arr, int rand){
+
+}
+*/
+
 int main(){
 
+// -------define Variables
 string input,x_c;
+string *bin;
+
 int x,c_last,c_cryp_001,endll=0;
 int *dArray;
+// ---------
 
-
+//------ OPEN FILE
 ofstream file_a;
 file_a.open ("file_a.txt");
+// --------- 
 
-cout<<"ha33333llo"<<endl;
+cout<<"ha3534634636"<<endl;
 
-getline(cin,input);
+getline(cin,input); // << INPUT
+
 int lenght_str=input.length()-1;
 dArray = new int[lenght_str];			//<-- array list
 
@@ -77,22 +109,20 @@ for(int i=0;i<=lenght_str;i++){
 	}
 }
 
-
-if(c_last>=4){
-	int x=0;
-	x=(c_last%3);
-	c_last=c_last/3;
-	if(x==0){
-		c_last--;
-		x=3;
-	}
-	dArray[lenght_str+1]=get_digit(dArray[c_last],x);
+//---------- GET NUMBER OF RANDOM
+if(c_last>=4 && c_last<=6){
+	dArray[lenght_str+1]=get_digit(dArray[1],c_last-3);
+}else if(c_last>=7 && c_last<=9){
+	dArray[lenght_str+1]=get_digit(dArray[2],c_last-6);
 }else{
 	dArray[lenght_str+1]=get_digit(dArray[0],c_last);
 }
+//----------------------
 
-	for(int i=0;i<=lenght_str+1;i++){
-		cout<<dArray[i]<<endl;
+
+	for(int i=0;i<=lenght_str;i++){
+		dArray[i] = dArray[i]+dArray[lenght_str+1];
+		//cout<<dArray[i]<<dArray[lenght_str+1];
 	}
 
 
